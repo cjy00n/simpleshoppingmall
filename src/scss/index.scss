@@ -1,0 +1,14 @@
+@import "products";
+@import "cart";
+
+#root {
+  max-width: 900px;
+}
+.gnb {
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
