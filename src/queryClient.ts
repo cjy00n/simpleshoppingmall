@@ -1,11 +1,5 @@
 import request, { RequestDocument } from "graphql-request";
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from "react-query";
+import { QueryClient } from "react-query";
 
 type AnyOBJ = { [key: string]: any };
 
@@ -16,8 +10,8 @@ export const getClient = (() => {
       client = new QueryClient({
         defaultOptions: {
           queries: {
-            cacheTime: 1000 * 60 * 60 * 24,
-            staleTime: 1000,
+            cacheTime: Infinity,
+            staleTime: Infinity,
             refetchOnMount: false,
             refetchOnReconnect: false,
             refetchOnWindowFocus: false,
@@ -71,4 +65,5 @@ export const graphqlFetcher = <T>(query: RequestDocument, variables = {}) =>
 
 export const QueryKeys = {
   PRODUCTS: "PRODUCTS",
+  CART: "CART",
 };
