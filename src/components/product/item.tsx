@@ -1,7 +1,7 @@
 import { Product } from "../../graphql/products";
 import { Link } from "react-router-dom";
-import { cartItemSelector } from "../../recoils/cart";
-import { useRecoilState } from "recoil";
+// import { cartItemSelector } from "../../recoils/cart";
+// import { useRecoilState } from "recoil";
 import { useMutation } from "react-query";
 import { graphqlFetcher } from "../../queryClient";
 import { ADD_CART } from "../../graphql/cart";
@@ -13,8 +13,8 @@ const ProductItem = ({
   createdAt,
   title,
 }: Product) => {
-  const [cartAmount, setCartAmount] = useRecoilState(cartItemSelector(id));
-  const addToCart = () => setCartAmount((prev) => (prev || 0) + 1);
+  // const [cartAmount, setCartAmount] = useRecoilState(cartItemSelector(id));
+  // const addToCart = () => setCartAmount((prev) => (prev || 0) + 1);
 
   const { mutate: addCart } = useMutation((id: string) =>
     graphqlFetcher(ADD_CART, { id })

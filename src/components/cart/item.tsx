@@ -2,6 +2,7 @@ import { useMutation, useQueryClient } from "react-query";
 import { Cart, DELETE_CART, UPDATE_CART } from "../../graphql/cart";
 import { QueryKeys, graphqlFetcher } from "../../queryClient";
 import { ForwardedRef, SyntheticEvent, forwardRef } from "react";
+import ItemData from "./itemData";
 
 const CartItem = (
   { id, title, imageUrl, price, amount }: Cart,
@@ -68,10 +69,9 @@ const CartItem = (
         type="checkbox"
         name={`select-item`}
         ref={ref}
+        data-id={id}
       />
-      <img className="cart-item_img" src={imageUrl} />
-      <p className="cart-item_title">{title}</p>
-      <p className="cart-item_price">{price}원</p>
+      <ItemData imageUrl={imageUrl} title={title} price={price} />
       <label>
         <input
           className="cart-item_amount"
