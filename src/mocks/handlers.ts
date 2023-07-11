@@ -1,10 +1,16 @@
 import { graphql } from "msw";
 import { GET_PRODUCTS, GET_PRODUCT } from "../graphql/products";
-import { ADD_CART, Cart, GET_CART, UPDATE_CART } from "../graphql/cart";
+import {
+  ADD_CART,
+  Cart,
+  DELETE_CART,
+  GET_CART,
+  UPDATE_CART,
+} from "../graphql/cart";
 
 const mockProducts = Array.from({ length: 20 }).map((_, i) => ({
   id: `${i + 1}`,
-  imageUrl: `https://www.dummyimage.com/200x150/${i}0000/${i}0000`,
+  imageUrl: `https://picsum.photos/id/${i * 20}/200/150`,
   price: 50000,
   title: `임시상품${i + 1}`,
   description: `임시상세내용${i + 1}`,
@@ -68,5 +74,13 @@ export const handlers = [
     newCartData[id] = newItem;
     cartData = newCartData;
     return res(ctx.data(newItem));
+  }),
+
+  graphql.mutation(DELETE_CART, (req, res, ctx) => {
+    const id = req.variables.id;
+    const newCartData = { ...cartData };
+    delete newCartData[id];
+    cartData = newCartData;
+    return res(ctx.data(id));
   }),
 ];

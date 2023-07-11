@@ -2,7 +2,9 @@
 @import "cart";
 
 #root {
+  display: flex;
   max-width: 900px;
+  flex-direction: column;
 }
 .gnb {
   ul {
