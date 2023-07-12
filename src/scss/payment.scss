@@ -1,0 +1,43 @@
+#modal .modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+
+  .modal_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    padding: 20px;
+    width: 70%;
+    max-width: 600px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    p {
+      margin-bottom: 50px;
+    }
+    button {
+      margin: 5px;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &.show {
+    display: block;
+  }
+}
