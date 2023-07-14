@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import { QueryKeys, graphqlFetcher } from "../../queryClient";
 import { GET_PRODUCTS, Products } from "../../graphql/products";
 import ProductList from "../../components/product/list";
+import React from "react";
 
 const ProductListPage = () => {
   const { data } = useQuery<Products>(QueryKeys.PRODUCTS, () =>

@@ -7,6 +7,7 @@ import PaymentModal from "./modal";
 import { useMutation } from "react-query";
 import { graphqlFetcher } from "../../queryClient";
 import { EXECUTE_PAY } from "../../graphql/payment";
+import React from "react";
 
 type PaymentInfos = string[];
 

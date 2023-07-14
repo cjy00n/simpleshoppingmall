@@ -2,6 +2,7 @@ import { useRecoilValue } from "recoil";
 import { checkedCartState } from "../../recoils/cart";
 import ItemData from "../cart/itemData";
 import { SyntheticEvent } from "react";
+import React from "react";
 
 const WillPay = ({
   handleSubmit,

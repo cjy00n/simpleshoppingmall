@@ -1,4 +1,4 @@
-import ProductItem from "../../components/product/item";
+import ProductItem from "./item";
 import { Product } from "../../graphql/products";
 
 const ProductList = ({ list }: { list: Product[] }) => {
