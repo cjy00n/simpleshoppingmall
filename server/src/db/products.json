@@ -1,0 +1,142 @@
+[
+  {
+    "id": "1",
+    "imageUrl": "https://picsum.photos/id/0/200/150",
+    "price": 50000,
+    "title": "임시상품1",
+    "description": "임시상세내용1"
+  },
+  {
+    "id": "2",
+    "imageUrl": "https://picsum.photos/id/20/200/150",
+    "price": 50000,
+    "title": "임시상품2",
+    "description": "임시상세내용2"
+  },
+  {
+    "id": "3",
+    "imageUrl": "https://picsum.photos/id/40/200/150",
+    "price": 50000,
+    "title": "임시상품3",
+    "description": "임시상세내용3"
+  },
+  {
+    "id": "4",
+    "imageUrl": "https://picsum.photos/id/60/200/150",
+    "price": 50000,
+    "title": "임시상품4",
+    "description": "임시상세내용4"
+  },
+  {
+    "id": "5",
+    "imageUrl": "https://picsum.photos/id/80/200/150",
+    "price": 50000,
+    "title": "임시상품5",
+    "description": "임시상세내용5"
+  },
+  {
+    "id": "6",
+    "imageUrl": "https://picsum.photos/id/100/200/150",
+    "price": 50000,
+    "title": "임시상품6",
+    "description": "임시상세내용6"
+  },
+  {
+    "id": "7",
+    "imageUrl": "https://picsum.photos/id/120/200/150",
+    "price": 50000,
+    "title": "임시상품7",
+    "description": "임시상세내용7"
+  },
+  {
+    "id": "8",
+    "imageUrl": "https://picsum.photos/id/140/200/150",
+    "price": 50000,
+    "title": "임시상품8",
+    "description": "임시상세내용8"
+  },
+  {
+    "id": "9",
+    "imageUrl": "https://picsum.photos/id/160/200/150",
+    "price": 50000,
+    "title": "임시상품9",
+    "description": "임시상세내용9"
+  },
+  {
+    "id": "10",
+    "imageUrl": "https://picsum.photos/id/180/200/150",
+    "price": 50000,
+    "title": "임시상품10",
+    "description": "임시상세내용10"
+  },
+  {
+    "id": "11",
+    "imageUrl": "https://picsum.photos/id/200/200/150",
+    "price": 50000,
+    "title": "임시상품11",
+    "description": "임시상세내용11"
+  },
+  {
+    "id": "12",
+    "imageUrl": "https://picsum.photos/id/220/200/150",
+    "price": 50000,
+    "title": "임시상품12",
+    "description": "임시상세내용12"
+  },
+  {
+    "id": "13",
+    "imageUrl": "https://picsum.photos/id/240/200/150",
+    "price": 50000,
+    "title": "임시상품13",
+    "description": "임시상세내용13"
+  },
+  {
+    "id": "14",
+    "imageUrl": "https://picsum.photos/id/260/200/150",
+    "price": 50000,
+    "title": "임시상품14",
+    "description": "임시상세내용14"
+  },
+  {
+    "id": "15",
+    "imageUrl": "https://picsum.photos/id/280/200/150",
+    "price": 50000,
+    "title": "임시상품15",
+    "description": "임시상세내용15"
+  },
+  {
+    "id": "16",
+    "imageUrl": "https://picsum.photos/id/300/200/150",
+    "price": 50000,
+    "title": "임시상품16",
+    "description": "임시상세내용16"
+  },
+  {
+    "id": "17",
+    "imageUrl": "https://picsum.photos/id/320/200/150",
+    "price": 50000,
+    "title": "임시상품17",
+    "description": "임시상세내용17"
+  },
+  {
+    "id": "18",
+    "imageUrl": "https://picsum.photos/id/340/200/150",
+    "price": 50000,
+    "title": "임시상품18",
+    "description": "임시상세내용18"
+  },
+  {
+    "id": "19",
+    "imageUrl": "https://picsum.photos/id/360/200/150",
+    "price": 50000,
+    "title": "임시상품19",
+    "description": "임시상세내용19"
+  },
+  {
+    "id": "20",
+    "imageUrl": "https://picsum.photos/id/380/200/150",
+    "price": 50000,
+    "title": "임시상품20",
+    "description": "임시상세내용20"
+  }
+]

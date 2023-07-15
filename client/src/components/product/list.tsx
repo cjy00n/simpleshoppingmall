@@ -1,5 +1,6 @@
 import ProductItem from "./item";
 import { Product } from "../../graphql/products";
+import React from "react";
 
 const ProductList = ({ list }: { list: Product[] }) => {
   return (
