@@ -13,6 +13,9 @@ const Gnb = () => (
       <li>
         <Link to="/cart">장바구니</Link>
       </li>
+      <li>
+        <Link to="/admin"> 관리자</Link>
+      </li>
     </ul>
   </nav>
 );

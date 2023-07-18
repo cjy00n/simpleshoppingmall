@@ -6,7 +6,7 @@ import ItemData from "./itemData";
 import React from "react";
 
 const CartItem = (
-  { id, product: { imageUrl, title, price }, amount }: Cart,
+  { id, product: { imageUrl, title, price, createdAt }, amount }: Cart,
   ref: ForwardedRef<HTMLInputElement>
 ) => {
   const queryClient = useQueryClient();
@@ -73,18 +73,23 @@ const CartItem = (
         name={`select-item`}
         ref={ref}
         data-id={id}
+        disabled={!createdAt}
       />
       <ItemData imageUrl={imageUrl} title={title} price={price} />
-      <label>
-        <input
-          className="cart-item_amount"
-          type="number"
-          value={amount}
-          min={1}
-          onChange={handleUpdateAmount}
-        />{" "}
-        개
-      </label>
+      {!createdAt ? (
+        <span>삭제된 상품입니다.</span>
+      ) : (
+        <label>
+          <input
+            className="cart-item_amount"
+            type="number"
+            value={amount}
+            min={1}
+            onChange={handleUpdateAmount}
+          />{" "}
+          개
+        </label>
+      )}
 
       <button
         className="cart-item_removeButton"

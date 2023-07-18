@@ -14,10 +14,10 @@ export type Resolver = {
 export type Product = {
   id: string;
   imageUrl: string;
-  price: number;
+  price?: number;
   title: string;
   description: string;
-  createdAt: number;
+  createdAt?: number;
 };
 
 export type Products = Product[];

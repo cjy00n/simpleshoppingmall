@@ -17,6 +17,7 @@ export const GET_CART = gql`
         imageUrl
         price
         title
+        createdAt
       }
     }
   }
@@ -31,6 +32,7 @@ export const ADD_CART = gql`
         imageUrl
         price
         title
+        createdAt
       }
     }
   }
@@ -46,6 +48,7 @@ export const UPDATE_CART = gql`
         imageUrl
         price
         title
+        createdAt
       }
     }
   }

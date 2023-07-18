@@ -19,7 +19,8 @@ const CartList = ({ items }: { items: Cart[] }) => {
     if (!formRef.current) return;
     const data = new FormData(formRef.current);
     const selectedCount = data.getAll("select-item").length;
-    const allchecked = selectedCount === items.length;
+    const allchecked =
+      selectedCount === items.filter((item) => item.product.createdAt).length;
     formRef.current.querySelector<HTMLInputElement>(
       ".cart_select-all"
     )!.checked = allchecked;
@@ -27,9 +28,11 @@ const CartList = ({ items }: { items: Cart[] }) => {
 
   const setItemsCheckedFromAll = (targetInput: HTMLInputElement) => {
     const allchecked = targetInput.checked;
-    checkboxRefs.forEach((inputElem) => {
-      inputElem.current!.checked = allchecked;
-    });
+    checkboxRefs
+      .filter((inputElem) => !inputElem.current?.disabled)
+      .forEach((inputElem) => {
+        inputElem.current!.checked = allchecked;
+      });
   };
 
   const handleCheckboxChanged = (e?: SyntheticEvent) => {

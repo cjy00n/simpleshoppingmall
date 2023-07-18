@@ -3,7 +3,6 @@ import { ApolloServer } from "apollo-server-express";
 import schema from "./schema";
 import resolvers from "./resolvers";
 import { DBfield, readDB } from "./dbController";
-
 (async () => {
   const server = new ApolloServer({
     typeDefs: schema,
