@@ -25,7 +25,6 @@ const CartItem = (
           (cartItem) => cartItem.id === id
         );
         if (targetIndex === undefined || targetIndex < 0) return prevCart;
-        console.log(prevCart[targetIndex]);
         const newCart = [...prevCart];
         newCart.splice(targetIndex, 1, { ...newCart[targetIndex], amount });
         queryClient.setQueryData(QueryKeys.CART, { cart: newCart });
@@ -61,7 +60,6 @@ const CartItem = (
   };
 
   const handleDeleteItem = () => {
-    console.log(id);
     deleteCart({ id });
   };
 

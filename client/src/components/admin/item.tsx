@@ -105,7 +105,9 @@ const AdminItem = ({
             상품설명 :
             <textarea name="description" defaultValue={description} />
           </label>
-          <button type="submit">상품수정</button>
+          <button type="submit">
+            {createdAt != null ? "상품수정" : "상품복구"}
+          </button>
           <button onClick={doneEdit}>취소</button>
         </form>
       </li>
@@ -121,11 +123,13 @@ const AdminItem = ({
         <span className="product-item_price">₩{price}</span>
         {!createdAt && <span>삭제된 상품</span>}
         <button className="admin-item_update-product" onClick={startEdit}>
-          수정
+          {createdAt ? "수정" : "수정 및 복구"}
         </button>
-        <button className="admin-item_delete-product" onClick={deleteItem}>
-          삭제
-        </button>
+        {createdAt && (
+          <button className="admin-item_delete-product" onClick={deleteItem}>
+            삭제
+          </button>
+        )}
       </li>
     );
   }

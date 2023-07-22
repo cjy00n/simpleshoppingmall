@@ -10,9 +10,14 @@
   padding: 10px;
 
   &_image {
-    width: 100%;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
   }
   &_description {
     font-size: small;
+  }
+  span {
+    margin-right: 10px;
   }
 }

@@ -15,8 +15,6 @@ import {
   where,
 } from "firebase/firestore";
 
-const setJSON = (data: Cart) => writeDB(DBfield.CART, data);
-
 const cartResolver: Resolver = {
   Query: {
     cart: async (parent, args) => {
@@ -28,7 +26,6 @@ const cartResolver: Resolver = {
         data.push({ id: doc.id, ...d });
       });
       return data;
-      // return db.cart;
     },
   },
   Mutation: {
@@ -93,21 +90,6 @@ const cartResolver: Resolver = {
         }
       }
       return deleted;
-      // const newCartData = db.cart.filter(
-      //   (cartItem) => !ids.includes(cartItem.id)
-      // );
-      // if (
-      //   newCartData.some((item) => {
-      //     const product = db.products.find(
-      //       (product: any) => product.id === item.id
-      //     );
-      //     return !product?.createdAt;
-      //   })
-      // )
-      //   throw new Error("삭제된 상품이 포함되어 결제를 진행할 수 없습니다.");
-      // db.cart = newCartData;
-      // setJSON(db.cart);
-      // return ids;
     },
   },
   CartItem: {
@@ -118,7 +100,6 @@ const cartResolver: Resolver = {
         ...data,
         id: product.id,
       };
-      // return db.products.find((product) => product.id === cartItem.id);
     },
   },
 };
